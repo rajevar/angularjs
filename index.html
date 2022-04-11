@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+  <script>
+    var app = angular.module('app',[]);
+  </script>
+  <script src="./directive/directive01.js"></script>
+  <script src="./directive02/dirrective02.js"></script>
+  
+</head>
+Hello from index.html..
+<body ng-app="app">
+<!-- 
+  <script type="text/ng-template" id="my-info-msg.html">
+    <h2 style="color:blue"> This from ng-template </h2>
+    <strong> {{msg}} </strong> 
+  </script>
+-->
+  <div ng-controller="emp">
+      <my-info-msg>
+      </my-info-msg>
+  </div>
+  <hr />
+  <div ng-controller="msg">
+    <div message text="First text message from directive...">
+        <div message text="Second text message from directive...">
+            Blah..
+        </div>
+    </div>
+</div> 
+
+</body>
+</html>
