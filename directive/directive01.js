@@ -7,6 +7,7 @@ app.controller('emp', ['$scope', function($scope) {
 
 app.directive('myInfoMsg', function() {
 	return {
-		templateUrl: '/directive/my-info-msg.html' 
+		templateUrl: '/directive/my-info-msg.html' , 
+		transclude: true
 	};
 });

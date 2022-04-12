@@ -1,0 +1,6 @@
+Watch
+----- 
+Nothing but monitoring.. Keeping track of (or watching) scope variables and the changes of their values.
+ - Keep track of variable and its values.
+ - Watched by angular framework.
+ - Some variables may not be watched.

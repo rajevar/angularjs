@@ -8,28 +8,40 @@
   </script>
   <script src="./directive/directive01.js"></script>
   <script src="./directive02/dirrective02.js"></script>
+  <script src="./watch/watch.js"></script>
+  <script src="./transclusion/trans.js"></script>
+
   
 </head>
 Hello from index.html..
 <body ng-app="app">
-<!-- 
-  <script type="text/ng-template" id="my-info-msg.html">
-    <h2 style="color:blue"> This from ng-template </h2>
-    <strong> {{msg}} </strong> 
-  </script>
--->
-  <div ng-controller="emp">
-      <my-info-msg>
-      </my-info-msg>
-  </div>
-  <hr />
-  <div ng-controller="msg">
-    <div message text="First text message from directive...">
-        <div message text="Second text message from directive...">
-            Blah..
-        </div>
+    <!-- 
+    <script type="text/ng-template" id="my-info-msg.html">
+        <h2 style="color:blue"> This from ng-template </h2>
+        <strong> {{msg}} </strong> 
+    </script>
+    -->
+    <div ng-controller="emp">
+        <my-info-msg>
+            <a href="https://www.youtube.com/watch?v=P0EG48zfq-Y">Transclusion</a>
+        </my-info-msg>
     </div>
-</div> 
-
+    <hr />
+    <div ng-controller="msg">
+        <div message text="First text message from directive...">
+            <div message text="Second text message from directive...">
+                Blah.. <span style="color:blue; font-size:.8rem">check console logs to see directive lifecycle..</span>
+            </div>
+        </div>
+    
+    </div> 
+    <hr />
+    <div ng-controller="watchCtrl">
+        <div ng-include="'/watch/watch.html'"></div>
+    </div>
+    <hr />
+    <div id="div1" ng-controller="transCtrl">	
+        <div ng-include="'/transclusion/trans.html'"></div>
+    </div>
 </body>
 </html>
